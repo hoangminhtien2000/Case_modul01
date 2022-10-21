@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Nhập</title>
+</head>
+<body>
+
+<img id="avata" onclick="changeAvata()" src="avatar.png" width="60">
+<button onclick="login()">Login</button>
+<button onclick="createAccount()">Creat Account</button>
+<div id="htname"></div>
+
+<form action="https://www.google.com.vn/search" target="_blank">
+    <input type="text" name="q" id="inputext"/>
+    <button onclick="deletetext()">SEARCH</button>
+</form>
+
+<script>
+    //AVATA
+    let avata = document.getElementById("avata");
+    function changeAvata() {
+        let x = prompt("Enter location Avata: ");
+        if (x == 0)
+            return avata.src;
+        else avata.src = x;
+    }
+
+    //CREAT ACCOUNT
+    let usernames = ["hoangminhtien", "a"];
+    let passwords = ["123", "456"];
+    let accountNames = ["Hoàng Minh Tiến", "abc"];
+
+    function isAccountExist(username) {
+        for (let i in usernames) {
+            if (usernames[i] === username) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function isPassworExist(password) {
+        for (let i in passwords) {
+            if (passwords[i] === password) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function checkName(username) {
+        for (let i in usernames) {
+            if (usernames[i] === username) {
+                return i;
+            }
+        }
+        return false;
+    }
+
+    function createAccount() {
+        let a = prompt("Enter User name");
+        let b = prompt("Enter Password");
+        let c = prompt("Enter Name Account");
+
+        if (isAccountExist(a) === true) {
+            alert("Account creation failed. Please create again");
+        } else {
+            usernames.push(a);
+            passwords.push(b);
+            accountNames.push(c);
+            alert("Create Account Success");
+        }
+    }
+
+    //LOGIN
+    function login() {
+        let a = prompt("Enter User name");
+        let b = prompt("Enter Password");
+        let c = document.getElementById("htname");
+        if (isAccountExist(a) === true && isPassworExist(b) === true) {
+            c.innerHTML = `<h4>${accountNames[checkName(a)]}</h4`;
+            alert(`Welcome ${accountNames[checkName(a)]}!!!`);
+        }
+        else  alert("Login failed");
+    }
+
+
+</script>
+</body>
+</html>
