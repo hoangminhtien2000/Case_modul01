@@ -6,31 +6,31 @@
 </head>
 <body>
 
-<img id="avata" onclick="changeAvata()" src="avatar.png" width="60">
+<img id="avatar" onclick="changeAvatar()" src="avatar.png" width="60">
 <button onclick="login()">Login</button>
 <button onclick="createAccount()">Creat Account</button>
-<div id="htname"></div>
+<div id="name"></div>
 
 <form action="https://www.google.com.vn/search" target="_blank">
-    <input type="text" name="q" id="inputext"/>
-    <button onclick="deletetext()">SEARCH</button>
+    <input type="text" name="q" />
+    <button>SEARCH</button>
 </form>
 
 <script>
 //AVATA
-    let avata = document.getElementById("avata");
-    function changeAvata() {
-        let x = prompt("Enter location Avata: ");
+    let avatar = document.getElementById("avatar");
+    function changeAvatar() {
+        let x = prompt("Enter location Avatar: ");
         if (x == 0)
-            return avata.src;
-        else avata.src = x;
+            return avatar.src;
+        else avatar.src = x;
     }
 
 
 //CREAT ACCOUNT
     let usernames = ["hoangminhtien", "a"];
     let passwords = ["123", "456"];
-    let accountNames = ["Hoàng Minh Tiến", "abc"];
+    let accountNames = ["Hoàng Minh Tiến", "TESTER"];
     //Kiểm tra tên đăng nhập đã tồn tại chưa.
     function isAccountExist(username) {
         for (let i in usernames) {
@@ -41,7 +41,7 @@
         return false;
     }
     //Kiểm tra tài khoản và mật khẩu đã tồn tại chưa.
-    function isAccountPassworExist(username,password) {
+    function isAccountPasswordExist(username,password) {
         for (let i in usernames) {
             if (usernames[i] === username&&passwords[i] === password) {
                 return true;
@@ -65,7 +65,7 @@
         let c = prompt("Enter Name Account");
         //Không cho phép tạo tài khoản có cùng tên đăng nhập
         if (isAccountExist(a) === true) {
-            alert("Account creation failed. Please create again");
+            alert("Account was Exist. Please, create New Account.");
         } else {
             usernames.push(a);
             passwords.push(b);
@@ -79,12 +79,12 @@
     function login() {
         let a = prompt("Enter User name");
         let b = prompt("Enter Password");
-        let c = document.getElementById("htname");
-        if (isAccountPassworExist(a,b) === true) {
+        let c = document.getElementById("name");
+        if (isAccountPasswordExist(a,b) === true) {
             c.innerHTML = `<h4>${accountNames[checkName(a)]}</h4`;
             alert(`Welcome ${accountNames[checkName(a)]}!!!`);
         }
-        else  alert("Login failed");
+        else  alert("Login Failed");
     }
 
 
