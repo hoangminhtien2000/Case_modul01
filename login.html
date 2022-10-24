@@ -5,32 +5,16 @@
     <title>Đăng Nhập</title>
 </head>
 <body>
-
-<img id="avatar" onclick="changeAvatar()" src="avatar.png" width="60">
 <button onclick="login()">Login</button>
 <button onclick="createAccount()">Creat Account</button>
-<div id="name"></div>
-
-<form action="https://www.google.com.vn/search" target="_blank">
-    <input type="text" name="q" />
-    <button>SEARCH</button>
-</form>
-
+<!--<div id="name"></div>-->
 <script>
-//AVATA
-    let avatar = document.getElementById("avatar");
-    function changeAvatar() {
-        let x = prompt("Enter location Avatar: ");
-        if (x == 0)
-            return avatar.src;
-        else avatar.src = x;
-    }
 
-
-//CREAT ACCOUNT
+    //CREAT ACCOUNT
     let usernames = ["hoangminhtien", "a"];
     let passwords = ["123", "456"];
     let accountNames = ["Hoàng Minh Tiến", "TESTER"];
+
     //Kiểm tra tên đăng nhập đã tồn tại chưa.
     function isAccountExist(username) {
         for (let i in usernames) {
@@ -40,15 +24,17 @@
         }
         return false;
     }
+
     //Kiểm tra tài khoản và mật khẩu đã tồn tại chưa.
-    function isAccountPasswordExist(username,password) {
+    function isAccountPasswordExist(username, password) {
         for (let i in usernames) {
-            if (usernames[i] === username&&passwords[i] === password) {
+            if (usernames[i] === username && passwords[i] === password) {
                 return true;
             }
         }
         return false;
     }
+
     //Tìm tên tài khoản
     function checkName(username) {
         for (let i in usernames) {
@@ -60,10 +46,10 @@
     }
 
     function createAccount() {
-        let a = prompt("Enter User name");
+        let a = prompt("Enter User Name");
         let b = prompt("Enter Password");
         let c = prompt("Enter Name Account");
-        //Không cho phép tạo tài khoản có cùng tên đăng nhập
+        //Không cho phép tạo tài khoản trùng tên đăng nhập(User Name) với tài khoản đã được tạo.
         if (isAccountExist(a) === true) {
             alert("Account was Exist. Please, create New Account.");
         } else {
@@ -74,17 +60,18 @@
         }
     }
 
-
-//LOGIN
+    /*-----------------------------------------------------------------------------------------------------------------*/
+    //LOGIN
     function login() {
         let a = prompt("Enter User name");
         let b = prompt("Enter Password");
         let c = document.getElementById("name");
-        if (isAccountPasswordExist(a,b) === true) {
-            c.innerHTML = `<h4>${accountNames[checkName(a)]}</h4`;
+        if (isAccountPasswordExist(a, b) === true) {
+
             alert(`Welcome ${accountNames[checkName(a)]}!!!`);
-        }
-        else  alert("Login Failed");
+            window.location.href="HOME.html";
+            c.innerHTML = `<h4>${accountNames[checkName(a)]}</h4`;
+        } else alert("Login Failed");
     }
 
 
