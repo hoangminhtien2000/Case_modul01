@@ -11,7 +11,7 @@ function login() {
 function logout() {
     let av = document.getElementById("avatar");
     let c = document.getElementById("name");
-    alert("Bạn vừa đăng xuất");
+    alert("Đăng xuất thành công");
     av.src= "avatar.png";
     c.innerHTML ="Mời đăng nhập";
 }
