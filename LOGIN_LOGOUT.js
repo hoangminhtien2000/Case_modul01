@@ -4,7 +4,7 @@ function login() {
     let c = document.getElementById("name");
     if (isAccountPasswordExist(a,b) === true) {
         alert(`Chào mừng ${accountNames[checkName(a)]}!!!`);
-        c.innerHTML = `<h4>${accountNames[checkName(a)]}</h4`;
+        c.innerHTML = `<p style="margin-top: 0"><b>${accountNames[checkName(a)]}</b</p>`;
     } else alert("Đăng nhập thất bại");
 }
 

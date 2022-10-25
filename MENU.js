@@ -8,20 +8,22 @@ function show() {
     console.log(names)
     let str = `
                 <tr>
-                <th></th>
+                <th>STT</th>
+                <th>Hình ảnh</th>
                 <th>Tên</th>
                 <th>Giá</th>
                </tr>
-                <tr><td colspan="5"><hr></td></tr>`;
+                <tr><td colspan="6"><hr></td></tr>`;
     for (let i = 0; i < names.length; i++) {
         str += `<tr>
+                        <td>${i}</td>
                         <td><img src="${names[i][0]}" width="100" height="50"></td>
                         <td>${names[i][1]}</td>
                         <td>${names[i][2]}</td>
                         <td><button onclick="edit(${i})">Sửa</button></td>
                         <td><button onclick="xoa(${i})">Xoá</button></td>
                     </tr>
-                    <tr><td colspan="5"><hr></td></tr>`;
+                    <tr><td colspan="6"><hr></td></tr>`;
     }
     divShow.innerHTML = str;
 }

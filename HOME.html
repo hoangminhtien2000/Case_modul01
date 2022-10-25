@@ -5,32 +5,60 @@
     <meta charset="UTF-8">
     <title>Quản lý thực đơn</title>
 </head>
-<body>
+<body style="background: url('background.png') top center / cover no-repeat">
+<marquee style="color:#110505 ; background-color: rgba(172,217,234,0.24); height: 40px;font-size: 35px;width: 800px;margin-left: 300px;">Đê ma ma thức
+    uống của mọi nhà
+</marquee>
 
-<div id="div01">
-    <img id="avatar" onclick="changeAvatar()" src="avatar.png" width="60" height="60">
+<div style="margin-left: 500px;margin-top: 10px">
+    <img id="avatar" onclick="changeAvatar()" src="avatar.png" width="100px" height="100px">
     <button onclick="login()">Đăng nhập</button>
     <button onclick="logout()">Đăng xuất</button>
     <button onclick="createAccount()">Tạo tài khoản</button>
 </div>
+<div id="name" style=" margin-left: 600px;margin-top: 10px;font-size: 30px">Mời đăng nhập</div>
 
-<div id="name">Mời đăng nhập</div>
-<h1 style="text-align: center">THỰC ĐƠN</h1>
-<form action="https://www.google.com.vn/search" target="_blank">
-    <input type="text" name="q"/>
-    <button>Tìm kiếm</button>
-</form>
-<table border="1" style=" border: 1px solid black; width: 300px;text-align: center; float: left">
-    <tr><td>Ảnh:</td> <td><input id="inputImg" placeholder="Nhập ảnh"></td></tr>
-    <tr><td>Tên:</td> <td><input id="inputName" placeholder="Nhập tên"></td></tr>
-    <tr><td>Giá:</td> <td><input id="inputPrice" placeholder="Nhập giá"></td></tr>
-    <tr><td><button onclick="add()">Thêm</button></tr>
-</table>
+<h2 style="margin-left: 800px;margin-top: 50px">THỰC ĐƠN</h2>
+<div style="margin-left: 300px;  background-color: rgba(240,252,255,0.14); padding: 30px; width: 700px;font-size: 20px ">
+    <table>
+        <tr>
+            <td>
+                <form action="https://www.google.com.vn/search" target="_blank">
+                    <input type="text" name="q"/>
+                    <button>Tìm kiếm</button>
+                </form>
+                <br>
+                <table border="1" style=" border: 1px solid black; width: 300px;text-align: center; float: left">
+                    <tr>
+                        <td>Ảnh:</td>
+                        <td><input id="inputImg" placeholder="Nhập đường dẫn ảnh"></td>
+                    </tr>
+                    <tr>
+                        <td>Tên:</td>
+                        <td><input id="inputName" placeholder="Nhập tên"></td>
+                    </tr>
+                    <tr>
+                        <td>Giá:</td>
+                        <td><input id="inputPrice" placeholder="Nhập giá"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="add()">Thêm</button>
+                    </tr>
+                </table>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <table id="show" style="width: 400px; height: 100px;text-align: center"></table>
+            </td>
+        </tr>
+    </table>
+</div>
 
-<table id="show" style="width: 400px; height: 100px;text-align: center"></table>
 
 <script>
-//AVATAR
+    //AVATAR
     let avatar = document.getElementById("avatar");
 
     function changeAvatar() {
