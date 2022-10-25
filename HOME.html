@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="background-01.css">
 <head>
     <meta charset="UTF-8">
     <title>Quản lý thực đơn</title>
 </head>
 <body>
 
-<div>
-<img id="avatar" onclick="changeAvatar()" src="avatar.png" width="60" height="60">
+<div id="div01">
+    <img id="avatar" onclick="changeAvatar()" src="avatar.png" width="60" height="60">
     <button onclick="login()">Đăng nhập</button>
     <button onclick="logout()">Đăng xuất</button>
     <button onclick="createAccount()">Tạo tài khoản</button>
 </div>
 
 <div id="name">Mời đăng nhập</div>
-
-
+<h1 style="text-align: center">THỰC ĐƠN</h1>
 <form action="https://www.google.com.vn/search" target="_blank">
     <input type="text" name="q"/>
     <button>Tìm kiếm</button>
 </form>
-
-<h1 style="text-align: center">THỰC ĐƠN</h1>
 <table border="1" style=" border: 1px solid black; width: 300px;text-align: center; float: left">
     <tr><td>Ảnh:</td> <td><input id="inputImg" placeholder="Nhập ảnh"></td></tr>
     <tr><td>Tên:</td> <td><input id="inputName" placeholder="Nhập tên"></td></tr>

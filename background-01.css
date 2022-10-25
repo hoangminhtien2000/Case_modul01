@@ -1,0 +1,13 @@
+body{
+    background: url("nen.png") top center / cover no-repeat;
+}
+
+#div01{
+    position: center;
+    text-align: center;
+}
+
+#name{
+    position: center;
+    text-align: center;
+}

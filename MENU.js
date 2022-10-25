@@ -3,11 +3,12 @@ let names = [
     ["https://wallpaperaccess.com/full/82635.jpg", "Cream", 25000]
 ];
 let divShow = document.getElementById("show");
+show();
 function show() {
     console.log(names)
     let str = `
                 <tr>
-                <th>Ảnh</th>
+                <th></th>
                 <th>Tên</th>
                 <th>Giá</th>
                </tr>
@@ -17,8 +18,8 @@ function show() {
                         <td><img src="${names[i][0]}" width="100" height="50"></td>
                         <td>${names[i][1]}</td>
                         <td>${names[i][2]}</td>
-                        <td><button onclick="edit(${i})">Edit</button></td>
-                        <td><button onclick="xoa(${i})">Delete</button></td>
+                        <td><button onclick="edit(${i})">Sửa</button></td>
+                        <td><button onclick="xoa(${i})">Xoá</button></td>
                     </tr>
                     <tr><td colspan="5"><hr></td></tr>`;
     }
