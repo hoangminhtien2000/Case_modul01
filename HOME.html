@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="background-01.css">
+<link rel="stylesheet" href="CHINH_NUT.css">
 <head>
     <meta charset="UTF-8">
     <title>Quản lý thực đơn</title>
@@ -11,12 +11,12 @@
 
 <div style="margin-left: 500px;margin-top: 10px">
     <img id="avatar" onclick="changeAvatar()" src="avatar.png" width="100px" height="100px">
-    <button onclick="login()">Đăng nhập</button>
-    <button onclick="logout()">Đăng xuất</button>
-    <button onclick="createAccount()">Tạo tài khoản</button>
+    <button class="login" onclick="login()">Đăng nhập</button>
+    <button class="login" onclick="logout()">Đăng xuất</button>
+    <button class="login" onclick="createAccount()">Tạo tài khoản</button>
 </div>
 
-<div id="name" style=" margin-left: 600px;margin-top: 10px;font-size: 30px">Mời đăng nhập</div>
+<div id="name" style=" margin-left: 600px;margin-top: 10px;font-size: 24px">Mời đăng nhập</div>
 
 <table>
     <tr>
@@ -25,7 +25,7 @@
     </tr>
 </table>
 
-<div style="margin-left: 300px;  background-color: rgba(240,252,255,0.14); padding: 30px; width: 700px;font-size: 20px ">
+<div style="margin-left: 300px;  background-color: rgba(240,252,255,0.14); padding: 30px; width: 780px;font-size: 20px ">
     <table>
         <tr>
             <td>
@@ -37,24 +37,30 @@
                 <table border="1" style=" border: 1px solid black; width: 300px;text-align: center; float: left">
                     <tr>
                         <td>Ảnh:</td>
-                        <td><input id="inputImg" placeholder="Nhập đường dẫn ảnh"></td>
+                        <td>
+                            <input  style="background-color: rgba(240,252,255,0.14);border: none;margin-bottom: 4px"  id="inputImg" placeholder="Nhập đường dẫn ảnh">
+                        </td>
                     </tr>
                     <tr>
                         <td>Tên:</td>
-                        <td><input id="inputName" placeholder="Nhập tên"></td>
+                        <td>
+                            <input style="background-color: rgba(240,252,255,0.14);border: none;margin-bottom: 4px" id="inputName" placeholder="Nhập tên">
+                        </td>
                     </tr>
                     <tr>
                         <td>Giá:</td>
-                        <td><input id="inputPrice" placeholder="Nhập giá"></td>
+                        <td>
+                            <input style="background-color: rgba(240,252,255,0.14);border: none;margin-bottom: 4px" id="inputPrice" type="number" placeholder="Nhập giá">
+                        </td>
                     </tr>
                     <tr>
-                        <td>
-                            <button onclick="add()">Thêm</button>
+                        <td colspan="2">
+                            <button class="add1" style="margin-bottom: 4px" onclick="add()">Thêm</button>
+                        </td>
                     </tr>
                 </table>
             </td>
-            <td></td>
-            <td></td>
+
             <td>
                 <table id="show" style="width: 400px; height: 100px;text-align: center"></table>
             </td>
@@ -74,6 +80,7 @@
         else avatar.src = x;
     }
 </script>
+
 <script src="CREAT_ACCOUNT.js"></script>
 <script src="LOGIN_LOGOUT.js"></script>
 <script src="MENU.js"></script>

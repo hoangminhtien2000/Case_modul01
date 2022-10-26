@@ -1,27 +1,26 @@
 let names = [
-    ["https://wallpaperaccess.com/full/1320703.jpg", "Coffe", 30000],
+    ["https://wallpaperaccess.com/full/1605638.jpg", "Coffe", 30000],
     ["https://wallpaperaccess.com/full/82635.jpg", "Cream", 25000]
 ];
 let divShow = document.getElementById("show");
 show();
 function show() {
-    console.log(names)
     let str = `
                 <tr>
                 <th>STT</th>
                 <th>Hình ảnh</th>
                 <th>Tên</th>
-                <th>Giá</th>
+                <th >Giá(vnđ)</th>
                </tr>
                 <tr><td colspan="6"><hr></td></tr>`;
     for (let i = 0; i < names.length; i++) {
         str += `<tr>
-                        <td>${i}</td>
-                        <td><img src="${names[i][0]}" width="100" height="50"></td>
-                        <td>${names[i][1]}</td>
-                        <td>${names[i][2]}</td>
-                        <td><button onclick="edit(${i})">Sửa</button></td>
-                        <td><button onclick="xoa(${i})">Xoá</button></td>
+                        <td >${i}</td>
+                        <td style="padding: 10px"><img src="${names[i][0]}" width="100" height="50"></td>
+                        <td style="padding: 8px">${names[i][1]}</td>
+                        <td >${names[i][2]}</td>
+                        <td><button onclick="edit(${i})" class="edit">Sửa</button></td>
+                        <td><button onclick="delete01(${i})" class="delete">Xoá</button></td>
                     </tr>
                     <tr><td colspan="6"><hr></td></tr>`;
     }
@@ -53,7 +52,7 @@ function add() {
 
 }
 
-function xoa(index) {
+function delete01(index) {
     names.splice(index, 1);
     show();
 }
