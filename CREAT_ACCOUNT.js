@@ -1,6 +1,11 @@
 let usernames  = JSON.parse(localStorage.getItem("usernames"));
 let passwords  = JSON.parse(localStorage.getItem("passwords"));
 let accountNames  = JSON.parse(localStorage.getItem("accountNames"));
+if (usernames === null||passwords === null||accountNames === null) {
+    usernames = [];
+    passwords = [];
+    accountNames = [];
+}
 
 //-----------------------------------Kiểm tra tên đăng nhập đã tồn tại chưa--------------------------------------------
 function isAccountExist(username) {

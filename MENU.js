@@ -1,7 +1,4 @@
-let names = [
-    ["https://wallpaperaccess.com/full/1605638.jpg", "Coffee", 30000],
-    ["https://wallpaperaccess.com/full/82635.jpg", "Cream", 25000]
-];
+let names  = JSON.parse(localStorage.getItem("names"));
 let divShow = document.getElementById("show");
 show();
 function show() {
@@ -40,6 +37,7 @@ function edit(index) {
     names.splice(index, 1, [img, name, price]);
     show();
     clear();
+    localStorage.setItem("names",JSON.stringify(names));
 }
 
 function add() {
@@ -49,10 +47,12 @@ function add() {
     names.push([img, name, price]);
     show();
     clear();
+    localStorage.setItem("names",JSON.stringify(names));
 
 }
 
 function delete01(index) {
     names.splice(index, 1);
     show();
+    localStorage.setItem("names",JSON.stringify(names));
 }
