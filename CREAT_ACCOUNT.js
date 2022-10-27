@@ -1,5 +1,5 @@
 let usernames = ["hoangminhtien", "a"];
-let passwords = ["123", "456"];
+let passwords = ["123", "123"];
 let accountNames = ["Hoàng Minh Tiến", "TESTER"];
 
 //-----------------------------------Kiểm tra tên đăng nhập đã tồn tại chưa--------------------------------------------
