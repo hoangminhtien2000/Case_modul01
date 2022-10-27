@@ -1,4 +1,11 @@
+// let names = [
+//     ["https://wallpaperaccess.com/full/1605638.jpg", "Coffee", 30000],
+//     ["https://wallpaperaccess.com/full/82635.jpg", "Cream", 25000]
+// ];
 let names  = JSON.parse(localStorage.getItem("names"));
+if (names === null) {
+    names = [];
+}
 let divShow = document.getElementById("show");
 show();
 function show() {
