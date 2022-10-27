@@ -1,3 +1,4 @@
+localStorage.setItem("accountNames", JSON.stringify(accountNames));
 function login() {
     let a = prompt("Mời nhập tên đăng nhập");
     let b = prompt("Mời nhập mật khẩu");

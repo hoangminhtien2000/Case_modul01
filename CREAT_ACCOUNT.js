@@ -1,9 +1,10 @@
-let usernames = ["hoangminhtien", "a"];
-let passwords = ["123", "123"];
-let accountNames = ["Hoàng Minh Tiến", "TESTER"];
+let usernames  = JSON.parse(localStorage.getItem("usernames"));
+let passwords  = JSON.parse(localStorage.getItem("passwords"));
+let accountNames  = JSON.parse(localStorage.getItem("accountNames"));
 
 //-----------------------------------Kiểm tra tên đăng nhập đã tồn tại chưa--------------------------------------------
 function isAccountExist(username) {
+    localStorage.setItem("usernames", JSON.stringify(usernames));
     for (let i in usernames) {
         if (usernames[i] === username) {
             return true;
@@ -14,6 +15,8 @@ function isAccountExist(username) {
 
 //----------------------------Kiểm tra tài khoản và mật khẩu đã tồn tại chưa-------------------------------------------
 function isAccountPasswordExist(username, password) {
+     localStorage.setItem("usernames", JSON.stringify(usernames));
+     localStorage.setItem("passwords", JSON.stringify(passwords));
     for (let i in usernames) {
         if (usernames[i] === username && passwords[i] === password) {
             return true;
@@ -24,7 +27,9 @@ function isAccountPasswordExist(username, password) {
 
 //------------------------------------------------Tìm tên tài khoản----------------------------------------------------
 function checkName(username) {
+     localStorage.setItem("usernames", JSON.stringify(usernames));
     for (let i in usernames) {
+
         if (usernames[i] === username) {
             return i;
         }
@@ -33,6 +38,7 @@ function checkName(username) {
 }
 
 function createAccount() {
+
     let a = prompt("Mời nhập tên đăng nhập");
     let b = prompt("Mời nhập mật khẩu");
     let c = prompt("Mời nhập tên tài khoản");
@@ -44,5 +50,8 @@ function createAccount() {
         passwords.push(b);
         accountNames.push(c);
         alert("Tài khoản tạo thành công");
+        localStorage.setItem("usernames", JSON.stringify(usernames));
+        localStorage.setItem("passwords", JSON.stringify(passwords));
+        localStorage.setItem("accountNames", JSON.stringify(accountNames));
     }
 }
