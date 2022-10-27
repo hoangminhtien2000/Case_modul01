@@ -1,3 +1,4 @@
+/*----------------------Nút sửa--------------------------*/
 .edit {
     background-color: #c25504;
     border: none;
@@ -56,6 +57,8 @@
     width: 100%;
 }
 
+
+/*----------------------Nút xoá--------------------------*/
 .delete {
     background-color: rgba(136, 39, 2, 0.91);
     border: none;
@@ -114,7 +117,7 @@
     width: 100%;
 }
 
-
+/*----------------------Nút đăng nhập - đăng xuất - tạo tài koản--------------------------*/
 .login{
 
     font-family: "proxima-nova", sans-serif;
@@ -194,6 +197,7 @@
     width: 120%;
 }
 
+/*----------------------Nút thêm--------------------------*/
 .add1 {
     background-color: brown;
     border: none;
@@ -252,4 +256,31 @@
     width: 100%;
 }
 
+/*----------------------Nút tìm kiếm--------------------------*/
+.search {
+    background: indianred;
+    background: linear-gradient(0deg, indianred 0%, indianred 100%);
+    border: none;
+    height: 23px;
 
+}
+.search:before {
+    height: 0%;
+    width: 2px;
+}
+.search:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .5),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+/*--------------------------------footer---------------------------------*/
+.footer{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 15px ;
+    font-size: 18px;
+
+}

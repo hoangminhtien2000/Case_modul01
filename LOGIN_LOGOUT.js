@@ -1,5 +1,5 @@
 function login() {
-    let a = prompt("Mời nhập tài khoản");
+    let a = prompt("Mời nhập tên đăng nhập");
     let b = prompt("Mời nhập mật khẩu");
     let c = document.getElementById("name");
     if (isAccountPasswordExist(a,b) === true) {

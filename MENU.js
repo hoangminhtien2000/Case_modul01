@@ -1,5 +1,5 @@
 let names = [
-    ["https://wallpaperaccess.com/full/1605638.jpg", "Coffe", 30000],
+    ["https://wallpaperaccess.com/full/1605638.jpg", "Coffee", 30000],
     ["https://wallpaperaccess.com/full/82635.jpg", "Cream", 25000]
 ];
 let divShow = document.getElementById("show");
@@ -15,7 +15,7 @@ function show() {
                 <tr><td colspan="6"><hr></td></tr>`;
     for (let i = 0; i < names.length; i++) {
         str += `<tr>
-                        <td >${i}</td>
+                        <td >${i+1}</td>
                         <td style="padding: 10px"><img src="${names[i][0]}" width="100" height="50"></td>
                         <td style="padding: 8px">${names[i][1]}</td>
                         <td >${names[i][2]}</td>
