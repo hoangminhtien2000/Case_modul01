@@ -8,15 +8,15 @@
 <body style="background: url('background.png') top center / cover no-repeat">
 <marquee
         style="color:#110505 ; background-color: rgba(172,217,234,0.24); height: 40px;font-size: 35px;width: 830px;margin-left: 300px;">
-    MỜI ĐĂNG NHẬP ĐỂ SỬ DỤNG CÁC TÍNH NĂNG!!!
+    MINH TIẾN COFFEE UỐNG LÀ MÊ!!!
 </marquee>
 
 <div style="margin-left: 500px;margin-top: 10px">
     <img id="avatar" onclick="changeAvatar()" src="avatar.png" width="100px" height="100px" >
-    <button class="login" onclick="login()">Đăng nhập</button>
-
+    <button class="login" onclick="logout()">Đăng xuất</button>
 </div>
 
+<div id="name" style=" margin-left: 500px;margin-top: 10px;font-size: 24px;font-family: 'Agency FB'">TÊN TÀI KHOẢN</div>
 
 <!---------------------------------------------MENU && INFORMATION----------------------------------------------------->
 <table>
@@ -34,8 +34,9 @@
     <table>
         <tr>
             <td style="vertical-align:top ">
-                <form>
-                    <input style="background-color: rgba(255,255,255,0.75); border: none; width: 200px; height: 20px"/>
+                <form action="https://www.google.com.vn/search" target="_blank" >
+                    <input style="background-color: rgba(255,255,255,0.75); border: none; width: 200px; height: 20px"
+                           type="text" name="q"/>
                     <button class="search">Tìm kiếm</button>
                 </form>
                 <br>
@@ -87,14 +88,31 @@
     </div>
 
 </footer>
+<!--------------------------------------------------FOOTER------------------------------------------------------------->
+<!--<script>-->
+<!--    function coffee() {-->
+<!--        window.open('https://www.facebook.com/odaycogaixinh68', '_blank');-->
+<!--    }-->
 
+<!--</script>-->
 
 
 <script>
-    function login() {
-        location.href="dangnhap.html"
-    }
+    // -------------------------------------------------AVATAR------------------------------------------------------------
+    let avatar = document.getElementById("avatar");
 
+    function changeAvatar() {
+        let x = prompt("Nhập đường dẫn Avatar: ");
+        if (x == 0)
+            return avatar.src;
+        else avatar.src = x;
+    }
+    // -------------------------------------------------AVATAR------------------------------------------------------------
+
+    function logout() {
+        location.href="HOME.html"
+    }
 </script>
+<script src="MENU.js"></script>
 </body>
 </html>
