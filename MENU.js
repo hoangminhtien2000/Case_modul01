@@ -7,7 +7,7 @@ if (names === null) {
     names = [
         ["https://wallpaperaccess.com/full/1605638.jpg","Coffee",30000],
         ["https://wallpaperaccess.com/full/82635.jpg","Scream",25000],
-        ["https://wallpaperaccess.com/full/2405819.jpg","Trà sữa","20000"],["","a","1212"]
+        ["https://wallpaperaccess.com/full/2405819.jpg","Trà sữa",20000]
     ];
 }
 let divShow = document.getElementById("show");
